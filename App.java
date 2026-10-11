@@ -3,7 +3,7 @@ import java.net.InetSocketAddress;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(8090), 0);
         server.createContext("/", exchange -> {
             byte[] page = "<h1>Hello from Java Frontend!</h1>".getBytes();
             exchange.getResponseHeaders().add("Content-Type", "text/html");
