@@ -16,7 +16,7 @@ spec:
         - name: java-frontend
           image: bneelam/java-frontend:v1
           ports:
-            - containerPort: 8080
+            - containerPort: 8090
 ---
 apiVersion: v1
 kind: Service
@@ -28,4 +28,4 @@ spec:
     app: java-frontend
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 8090
